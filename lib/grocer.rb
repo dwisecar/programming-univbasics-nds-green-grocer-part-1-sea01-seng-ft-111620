@@ -14,6 +14,9 @@ def find_item_by_name_in_collection(name, collection)
       end
     end
   end
+  if hash_to_return == {}
+    hash_to_return == nil
+  end
   hash_to_return
 
 end
