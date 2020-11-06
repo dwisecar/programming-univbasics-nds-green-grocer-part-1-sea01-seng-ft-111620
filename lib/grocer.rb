@@ -27,7 +27,7 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   
   consolidated_cart = []
-  count_hash = { :count => 0 }
+  count_hash = { :count => 1 }
   count_added_hash = {}
   
   cart.each do |element|
