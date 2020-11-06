@@ -1,4 +1,3 @@
-require "pry"
 
 def find_item_by_name_in_collection(name, collection)
   # Implement me first!
@@ -33,7 +32,7 @@ def consolidate_cart(cart)
   
   cart.each do |element|
     count_added_hash = element.merge({:count => 1})
-    #binding.pry
+
     if (find_item_by_name_in_collection(count_added_hash[:item], consolidated_cart) == nil)
       consolidated_cart << count_added_hash
     else
