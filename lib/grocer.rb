@@ -37,7 +37,7 @@ def consolidate_cart(cart)
     end
     
     count_added_hash = element.merge({:count => current_count})
-    #binding.pry
+    binding.pry
     
     consolidated_cart << count_added_hash
   end
