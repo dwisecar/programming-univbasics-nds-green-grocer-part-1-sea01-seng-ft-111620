@@ -32,6 +32,7 @@ def consolidate_cart(cart)
   cart.each do |element|
     count_added_hash = element.merge(count_hash)
     if count_added_hash[:item] == find_item_by_name_in_collection(:item, cart)
+      binding.pry
       count_added_hash[:count] += 1;
     end
     consolidated_cart << count_added_hash
