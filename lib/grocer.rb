@@ -27,17 +27,15 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   
   consolidated_cart = []
-  count_hash = { :count => 1 }
+  count_hash = { :count => 0 }
   count_added_hash = {}
+  
   cart.each do |element|
     count_added_hash = element.merge(count_hash)
-    if (count_added_hash[:item] == find_item_by_name_in_collection(:item, cart))
-      binding.pry
-      count_added_hash[:count] += 1
-    end
+    if find_item_by_name_in_collection(count_added_hash[:item], cart) 
     consolidated_cart << count_added_hash
   end
- 
+
       
 
 end
