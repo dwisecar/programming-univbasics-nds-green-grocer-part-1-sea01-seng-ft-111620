@@ -5,7 +5,16 @@ def find_item_by_name_in_collection(name, collection)
   #
   # Consult README for inputs and outputs
   
-  collection for each 
+  hash_to_return = {}
+  
+  collection.each do |element|
+    element.each do |key, value|
+      if value == name
+        hash_to_return = element
+      end
+    end
+  end
+  hash_to_return
 
 end
 
