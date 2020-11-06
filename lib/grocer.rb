@@ -32,11 +32,9 @@ def consolidate_cart(cart)
   current_count = 0
   
   cart.each do |element|
-    element.each do |key, value|
-      if value 
-    end
+    if find_item_by_name_in_collection(element[:item], cart) == element
     
-    count_added_hash = element.merge(count_hash)
+    count_added_hash = element.merge({:count => current_count})
     #binding.pry
     
     consolidated_cart << count_added_hash
