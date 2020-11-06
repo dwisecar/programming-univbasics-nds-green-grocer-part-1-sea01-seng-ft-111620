@@ -29,6 +29,7 @@ def consolidate_cart(cart)
   consolidated_cart = []
   count_hash = { :count => 1 }
   count_added_hash = {}
+  current_count = 0
   
   cart.each do |element|
     count_added_hash = element.merge(count_hash)
